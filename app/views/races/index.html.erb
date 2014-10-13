@@ -1,4 +1,4 @@
-<h1>Listing races</h1>
+<h1>Lista de Raças</h1>
 
 <table>
   <thead>
@@ -12,9 +12,8 @@
     <% @races.each do |race| %>
       <tr>
         <td><%= race.name %></td>
-        <td><%= link_to 'Show', race %></td>
-        <td><%= link_to 'Edit', edit_race_path(race) %></td>
-        <td><%= link_to 'Destroy', race, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editar', edit_race_path(race) %></td>
+        <td><%= link_to 'Deletar', race, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +21,6 @@
 
 <br>
 
-<%= link_to 'New Race', new_race_path %>
+<%= link_to 'Cadastrar nova Raça', new_race_path %>
+<br>
+<%= link_to 'Animais', animals_path%>

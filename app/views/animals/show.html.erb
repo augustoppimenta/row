@@ -12,8 +12,15 @@
 
 <p>
   <strong>Raça:</strong>
-  <%= @animal.race_id %>
+  <%= @animal.race.name%>
 </p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @animal.status%>
+</p>
+
+
 
 <%= link_to 'Editar', edit_animal_path(@animal) %> |
 <%= link_to 'Voltar', animals_path %>

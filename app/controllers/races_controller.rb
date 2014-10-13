@@ -9,8 +9,6 @@ class RacesController < ApplicationController
 
   # GET /races/1
   # GET /races/1.json
-  def show
-  end
 
   # GET /races/new
   def new
@@ -28,7 +26,7 @@ class RacesController < ApplicationController
 
     respond_to do |format|
       if @race.save
-        format.html { redirect_to @race, notice: 'Race was successfully created.' }
+        format.html { redirect_to races_url, notice: 'Race was successfully created.' }
         format.json { render :show, status: :created, location: @race }
       else
         format.html { render :new }
