@@ -18,7 +18,7 @@ class RacesControllerTest < ActionController::TestCase
 
   test "should create race" do
     assert_difference('Race.count') do
-      post :create, race: { nome: @race.nome }
+      post :create, race: { name: @race.name }
     end
 
     assert_redirected_to race_path(assigns(:race))
@@ -35,7 +35,7 @@ class RacesControllerTest < ActionController::TestCase
   end
 
   test "should update race" do
-    patch :update, id: @race, race: { nome: @race.nome }
+    patch :update, id: @race, race: { name: @race.name }
     assert_redirected_to race_path(assigns(:race))
   end
 
