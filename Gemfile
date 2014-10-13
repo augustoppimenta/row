@@ -39,3 +39,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'simple_form'
+
+gem 'bootstrap-generators', '~> 3.1.1'
