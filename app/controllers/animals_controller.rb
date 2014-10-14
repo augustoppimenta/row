@@ -10,6 +10,17 @@ class AnimalsController < ApplicationController
   # GET /animals/1
   # GET /animals/1.json
   def show
+      if(@animal.race_id ==1 && @animal.age >= 15 && @animal.peso >= 330)
+        flash[:notice] = "ATENÇÃO: Esta novilha pode ser liberada para reprodução!"
+      elsif(@animal.race_id ==2 && @animal.age >= 24 && @animal.peso >= 330)
+        flash[:notice] = "ATENÇÃO: Esta novilha pode ser liberada para reprodução!"
+      elsif(@animal.race_id ==3 && @animal.age >= 20 && @animal.peso >= 320)
+        flash[:notice] = "ATENÇÃO: Esta novilha pode ser liberada para reprodução!"
+      elsif(@animal.race_id ==4 && @animal.age >= 15 && @animal.peso >= 230)
+        flash[:notice] = "ATENÇÃO: Esta novilha pode ser liberada para reprodução!"
+      elsif(@animal.race_id ==14 && @animal.age >= 20 && @animal.peso >= 270)
+        flash[:notice] = "ATENÇÃO: Esta novilha pode ser liberada para reprodução!"
+      end
   end
 
   # GET /animals/new

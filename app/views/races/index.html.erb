@@ -3,7 +3,8 @@
   <table class="table table-striped table-bordered table-hover">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Id da Raça </th>
+        <th>Nome </th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -11,6 +12,7 @@
     <tbody>
       <% @races.each do |race| %>
         <tr>
+          <td><%= race.id %></td>
           <td><%= race.name %></td>
           <td><%= link_to 'Editar', edit_race_path(race), class: 'btn btn-default'  %></td>
           <td><%= link_to 'Deletar', race, method: :delete, data: { confirm: 'Tem certeza?' }, class: 'btn btn-default'  %></td>
