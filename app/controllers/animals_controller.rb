@@ -18,7 +18,7 @@ class AnimalsController < ApplicationController
         flash[:notice] = "ATENÇÃO: Esta novilha pode ser liberada para reprodução!"
       elsif(@animal.race_id ==4 && @animal.age >= 15 && @animal.peso >= 230)
         flash[:notice] = "ATENÇÃO: Esta novilha pode ser liberada para reprodução!"
-      elsif(@animal.race_id ==14 && @animal.age >= 20 && @animal.peso >= 270)
+      elsif(@animal.race_id ==5 && @animal.age >= 20 && @animal.peso >= 270)
         flash[:notice] = "ATENÇÃO: Esta novilha pode ser liberada para reprodução!"
       end
   end

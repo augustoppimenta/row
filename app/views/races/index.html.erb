@@ -15,7 +15,6 @@
           <td><%= race.id %></td>
           <td><%= race.name %></td>
           <td><%= link_to 'Editar', edit_race_path(race), class: 'btn btn-default'  %></td>
-          <td><%= link_to 'Deletar', race, method: :delete, data: { confirm: 'Tem certeza?' }, class: 'btn btn-default'  %></td>
         </tr>
       <% end %>
     </tbody>
