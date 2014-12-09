@@ -41,3 +41,9 @@ gem 'spring',        group: :development
 gem 'simple_form'
 
 gem 'bootstrap-generators', '~> 3.1.1'
+
+
+group :production do
+  gem 'pg',             '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+end
