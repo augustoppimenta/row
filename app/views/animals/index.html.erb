@@ -33,3 +33,13 @@
 <br>
 <br>
 <%= link_to 'Nova Raça', new_race_path, class: 'btn btn-default'  %>
+<br>
+<h1>Dashbord</h1>
+
+<h3>Animais por idade</h3>
+
+<%= pie_chart  @animals.group(:age).count %>
+
+<h3>Animais por Raça</h3>
+
+<%= pie_chart  @animals.joins(:race).group('races.name').count %>
